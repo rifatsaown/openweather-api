@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Temperature Hot</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url(images/bg-image.jpg) no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .error {
+            text-transform: capitalize;
+            text-align: center;
+            color: rgba(255, 0, 0, 0.76);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-6 m-auto py-5">
+            <div class="input-group mb-3">
+                <input id="cityInput" type="text" class="form-control" placeholder="Enter a location for Weather ...">
+                <div class="input-group-append">
+                    <button onclick="searchWeather()" type="button" class="btn btn-danger">Search</button>
+                    <h1 id="err"></h1>
+                </div>
+            </div>
+        </div>
+        <div id="error"></div>
+        <div id="weather" class="weather-status text-white text-center">
+            <img id="img" src='https://openweathermap.org/img/wn/04n@2x.png' alt="">
+            <h1 id="city">City Name</h1>
+            <h3><span id="temp">Temperature</span>&deg;C</h3>
+            <h1 id="weatherStats" class="lead">Weather Status</h1>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
