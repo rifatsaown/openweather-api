@@ -1,7 +1,7 @@
 const searchWeather = async () => {
     const cityInput = document.getElementById('cityInput');
     const cityName = cityInput.value;
-    const res = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${'9d1b58c4f1ba67b08c2901b2bc4f1103'}&units=metric`);
+    const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${'9d1b58c4f1ba67b08c2901b2bc4f1103'}&units=metric`);
     const data = await res.json();
     showWeather(data);
     cityInput.value = "";
